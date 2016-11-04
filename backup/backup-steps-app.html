@@ -1,0 +1,39 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/iron-pages/iron-pages.html">
+<link rel="import" href="../bower_components/iron-selector/iron-selector.html">
+
+<!-- Using layout classes -->
+<link rel="import" href="../bower_components/iron-flex-layout/iron-flex-layout-classes.html">
+
+<link rel="import" href="./google-codelab.html">
+<link rel="import" href="./google-codelab-step.html">
+
+
+<dom-module id="backup-steps-app">
+
+    <template>
+
+
+        <google-codelab title="Awesome codelab" feedback-link="http://example.org"
+                        last-updated="2015-01-28">
+            <google-codelab-step label="One" step="1" duration="10">
+                ...1
+            </google-codelab-step>
+            <google-codelab-step label="Two" step="2" duration="15">
+                ...2
+            </google-codelab-step>
+        </google-codelab>
+
+
+    </template>
+
+    <script>
+        Polymer({
+            is: 'backup-steps-app',
+            properties: {},
+            ready: function () {
+                console.log("<j-steps-app> Element is Ready");
+            }
+        });
+    </script>
+</dom-module>
