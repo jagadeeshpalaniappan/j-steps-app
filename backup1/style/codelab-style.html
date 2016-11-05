@@ -31,7 +31,7 @@ the License.
   };
 
   --app-drawer-content-container: {
-    background: var(--j-step-set-background, --paper-grey-100);
+    background: var(--j-steps-background, --paper-grey-100);
   };
 
   --nav-height: 64px;
@@ -63,7 +63,7 @@ app-drawer-layout {
 }
 
 #main-content {
-  background: var(--j-step-set-background, --paper-grey-300);
+  background: var(--j-steps-background, --paper-grey-300);
 }
 
 #pages {
@@ -75,7 +75,7 @@ app-drawer-layout {
 }
 
 #main-toolbar {
-  background: var(--j-step-set-header-background, --paper-blue-600);
+  background: var(--j-steps-header-background, --paper-blue-600);
   color: #fff;
   display: flex;
   align-items: center;
@@ -98,8 +98,8 @@ paper-icon-button[icon=menu] {
 }
 
 paper-fab {
-  --paper-fab-keyboard-focus-background: var(--j-step-set-fab-background, --paper-blue-700);
-  --paper-fab-background: var(--j-step-set-fab-background, --paper-blue-700);
+  --paper-fab-keyboard-focus-background: var(--j-steps-fab-background, --paper-blue-700);
+  --paper-fab-background: var(--j-steps-fab-background, --paper-blue-700);
   flex-shrink: 0;
 }
 
@@ -142,7 +142,7 @@ paper-fab {
 
 #controls .fabs {
   /* Note: custom props don't work in calc(). */
-  max-width: calc(800px + 175px);
+  /*max-width: calc(800px + 175px);*/
   margin: 0 auto;
 }
 
@@ -155,7 +155,7 @@ paper-fab {
 }
 
 .navbutton.prevbutton[disabled] {
-  background: var(--j-step-set-fab-background);
+  background: var(--j-steps-fab-background);
   color: white;
   transform: scale(0);
 }
@@ -238,10 +238,9 @@ paper-fab {
 }
 
 #metadata {
-  color: var(--j-step-set-footer-text-color, #777);
+  color: var(--j-steps-footer-text-color, #777);
   font-size: 0.7em;
-  flex: 0 0 50px;
-  margin-bottom: 20px;
+  flex: 0 0 70px;
 }
 
 #feedback a {
@@ -250,7 +249,7 @@ paper-fab {
 
 @media (min-width: 641px) {
   :host(:not([theme="minimal"])) #pages {
-    margin-top: 32px;
+    margin-top: 0px;
   }
   #controls {
     padding: 0 32px;

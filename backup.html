@@ -8,12 +8,32 @@
     <link rel="manifest" href="/manifest.json">
     <script src="/bower_components/webcomponentsjs/webcomponents-lite.js"></script>
 
-    <link rel="import" href="./backup/backup-steps-app.html">
+
+    <script>
+        window.Polymer = {
+            dom: 'shadow',
+            lazyRegister: 'max',
+            useNativeCSSProperties: true
+        };
+    </script>
+
+    <link rel="import" href="./backup0/j-steps-app.html">
+
+
+    <style is="custom-style">
+        body {
+            font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial;
+            background: var(--j-step-set-background, --paper-grey-300);
+        }
+    </style>
+
+
+
 </head>
 <body>
 
 
-<backup-steps-app></backup-steps-app>
+<j-steps-app></j-steps-app>
 
 
 </body>

@@ -1,0 +1,45 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/iron-pages/iron-pages.html">
+<link rel="import" href="../bower_components/iron-selector/iron-selector.html">
+
+<!-- Using layout classes -->
+<link rel="import" href="../bower_components/iron-flex-layout/iron-flex-layout-classes.html">
+
+<link rel="import" href="./j-step-set.html">
+<link rel="import" href="./j-step.html">
+
+
+<dom-module id="j-steps-simple-app">
+
+    <template>
+
+
+        <j-step-set title="Step By Step Tutorial" feedback-link="http://example.org" last-updated="2015-01-28">
+            <j-step label="Step 1" step="1" duration="10">
+
+                <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+
+
+
+            </j-step>
+            <j-step label="Step 2" step="2" duration="15">
+
+                <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
+
+
+            </j-step>
+        </j-step-set>
+
+
+    </template>
+
+    <script>
+        Polymer({
+            is: 'j-steps-simple-app',
+            properties: {},
+            ready: function () {
+                console.log("<j-steps-simple-app> Element is Ready");
+            }
+        });
+    </script>
+</dom-module>

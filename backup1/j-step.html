@@ -1,12 +1,28 @@
+<!--
+Copyright (c) 2015 Google Inc.
+
+Licensed under the Apache License, Version 2.0 (the "License"); you may not
+use this file except in compliance with the License. You may obtain a copy of
+the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+License for the specific language governing permissions and limitations under
+the License.
+-->
+
 <link rel="import" href="../bower_components/polymer/polymer.html">
-<link rel="import" href="./style/shared-style.html">
+<!--<link rel="import" href="./style/shared-style.html">-->
 <link rel="import" href="./style/step-style.html">
 
 <link rel="import" href="./style/syntax-style.html">
 <script src="../bower_components/google-prettify/src/prettify.js"></script>
 
 <!--
-A single codelab step for `<j-step-set>` element.
+A single codelab step for `<j-steps>` element.
 It provides mostly styling, including snippets highlighting.
 
 Example:
@@ -60,14 +76,14 @@ Custom property                         | Description
       /**
        * Fired when user copies a snippet into the clipboard.
        * Not all browsers are supported. See http://caniuse.com/#feat=clipboard.
-       * @event j-step-set-snippet-copy
+       * @event j-steps-snippet-copy
        * @detail {{snippet: String}}
        */
 
       properties: {
         /**
          * Step number, starting from 1.
-         * Normally set by the parent `<j-step-set>` element.
+         * Normally set by the parent `<j-steps>` element.
          */
         step: {
           type: Number,
@@ -94,7 +110,7 @@ Custom property                         | Description
 
         /**
          * Indicates whether this step is currently showing.
-         * Normally set by the parent `<j-step-set>` element.
+         * Normally set by the parent `<j-steps>` element.
          */
         active: {
           type: Boolean,
@@ -108,8 +124,8 @@ Custom property                         | Description
       _activeChanged: function() {
         var codelab = Polymer.dom(this).parentNode;
 
-        // Don't syntax highlight code if j-step-set requests it.
-        if (codelab.localName === 'j-step-set' && codelab.noHighlight) {
+        // Don't syntax highlight code if j-steps requests it.
+        if (codelab.localName === 'j-steps' && codelab.noHighlight) {
           return;
         }
 
@@ -124,7 +140,7 @@ Custom property                         | Description
                   encodeHTMLEntities_(block.textContent));
 
               block.addEventListener('copy', function() {
-                this.fire('j-step-set-snippet-copy', {
+                this.fire('j-steps-snippet-copy', {
                   snippet: block.textContent
                 });
               }.bind(this));
@@ -138,4 +154,4 @@ Custom property                         | Description
 
   })();
   </script>
-</dom-module>
+</dom-m
